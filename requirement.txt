@@ -1,0 +1,6 @@
+uvicorn
+requests
+numpy
+joblib
+"fastapi[standard]"
+scikit-learn
