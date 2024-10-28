@@ -4,3 +4,4 @@ numpy
 joblib
 fastapi[standard]
 scikit-learn
+werkzeug
