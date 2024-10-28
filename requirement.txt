@@ -2,5 +2,5 @@ uvicorn
 requests
 numpy
 joblib
-"fastapi[standard]"
+fastapi[standard]
 scikit-learn
