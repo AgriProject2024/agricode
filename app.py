@@ -56,7 +56,7 @@ class UserLogin(BaseModel):
 @app.post("/login")
 async def login_user(user: UserLogin):
     try:
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('users.db', timeout=10)
         cursor = conn.cursor()
         cursor.execute('''
             SELECT username, email, contact FROM users WHERE email = ? AND password = ?
@@ -88,7 +88,7 @@ async def login_user(user: UserLogin):
 @app.post("/register")
 async def register_user(user: UserRegister):
     try:
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('users.db', timeout=10)
         cursor = conn.cursor()
         cursor.execute('''
             INSERT INTO users (username, email, password, contact)
